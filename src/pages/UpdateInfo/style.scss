@@ -1,0 +1,60 @@
+@import "../../assets/styles/imports";
+.updateInfo {
+  h2 {
+    text-align: center;
+    margin: 40px;
+    font-size: 24px;
+  }
+  &__wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: $grey-cl;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    border-radius: $border-radius-normal;
+    padding: 30px 52px;
+    .left {
+      .group {
+        display: grid;
+        grid-template-columns: 1fr 70%;
+        margin-bottom: 20px;
+        padding-right: 30px;
+        .group__title {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          margin-right: 30px;
+          font-size: $fs-text-medium;
+          font-weight: unset;
+        }
+        &__input {
+          input {
+            padding: 10px;
+          }
+        }
+        &__wrapper {
+          label {
+            font-size: $fs-text-medium;
+          }
+        }
+      }
+    }
+    .right {
+      .--avatar {
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 20px;
+        }
+      }
+      .button {
+        margin-top: 30px;
+        background-color: red;
+      }
+    }
+  }
+}

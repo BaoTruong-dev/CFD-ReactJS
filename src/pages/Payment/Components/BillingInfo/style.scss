@@ -1,0 +1,10 @@
+@import "../../../../assets/styles/imports";
+.billingInfo {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .left {
+      padding-right: 32px;
+    }
+  }
+}

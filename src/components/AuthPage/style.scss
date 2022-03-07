@@ -1,0 +1,64 @@
+@import "../../assets/styles/imports";
+.authPage {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba($black-cl, 0.7), rgba($black-cl, 0.7)),
+    url("../../assets/imgs/login/bg.jpeg") center;
+  padding-top: 10%;
+  &__wrapper {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    height: 400px;
+    background: $white-cl;
+    border-radius: $border-radius-normal;
+    -webkit-box-shadow: 2px 5px 15px 3px #000000;
+    box-shadow: 2px 5px 15px 3px #000000;
+    &--left {
+      padding: 20px;
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      form {
+        .group {
+          margin-bottom: 15px;
+        }
+        & > .inputField {
+          margin-bottom: 15px;
+        }
+        .forgot {
+          display: block;
+          font-size: $fs-text-small;
+          margin-top: 10px;
+        }
+        .directRegister {
+          display: block;
+          font-size: $fs-text-small;
+          margin: 10px 0 20px;
+          color: $main-green-cl;
+        }
+      }
+    }
+    &--right {
+      @include flexCustom;
+      flex-direction: column;
+      background: linear-gradient(rgba($black-cl, 0.3), rgba($black-cl, 0.3)),
+        url("../../assets/imgs/login/right_layout.jpg") center;
+      background-size: cover;
+      h4 {
+        color: $white-cl;
+        margin-bottom: 15px;
+      }
+      .button {
+        &__wrapper {
+          div {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+    }
+  }
+}

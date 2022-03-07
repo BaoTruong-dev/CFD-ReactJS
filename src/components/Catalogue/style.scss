@@ -1,0 +1,49 @@
+@import "../../assets/styles/imports";
+.catalogue {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      margin-bottom: auto;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    ul {
+      flex: 1;
+      li {
+        margin-top: 16px;
+        a {
+          color: $main-green-cl;
+          font-size: $fs-text-medium;
+        }
+      }
+    }
+    &.product {
+      margin: 50px 0;
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          margin-right: 16px;
+          background-color: $grey-cl;
+          padding: 4px 10px;
+          border-radius: 12px;
+          a {
+            color: $black-cl !important;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    &.underLine {
+      ul {
+        li {
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

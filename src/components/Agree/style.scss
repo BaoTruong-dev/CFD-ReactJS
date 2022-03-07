@@ -1,0 +1,19 @@
+@import "../../assets/styles/imports";
+.agree {
+  border: 1px solid $light-grey-cl;
+  border-radius: $border-radius-normal;
+  @include flexCustom(center, unset);
+  padding: 12px 18px;
+  input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  label {
+    font-size: $fs-text-medium;
+    font-weight: 400;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../assets/styles/imports";
+.creditCard {
+  border: 1px solid $light-grey-cl;
+  border-radius: $border-radius-normal;
+  padding: 18px;
+  &__input {
+    @include flexCustom(center, space-between);
+    & > div:first-child {
+      @include flexCustom;
+      input {
+        width: 20px;
+        height: 20px;
+        margin-right: 18px;
+      }
+      label {
+        font-weight: 600;
+      }
+    }
+  }
+  &__number {
+    display: none;
+    margin-top: 34px;
+    &.show {
+      display: block;
+    }
+  }
+  &__holder {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    &.show {
+      display: grid;
+    }
+    .right {
+      @include flexCustom(center, space-between);
+    }
+  }
+}

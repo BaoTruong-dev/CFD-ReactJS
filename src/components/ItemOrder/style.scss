@@ -1,0 +1,86 @@
+@import "../../assets/styles/imports";
+.itemOrder {
+  display: flex;
+  &__left {
+    margin-right: 16px;
+    &--img {
+      width: 100px;
+      height: 68px;
+      background-color: rgba($light-grey-cl, 0.3);
+      border-radius: $border-radius-normal;
+      margin-bottom: 12px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--wishList,
+    &--compare,
+    &--remove {
+      @include flexCustom(center, unset);
+      .svg {
+        @include flexCustom;
+        margin-right: 8px;
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      p {
+        font-size: $fs-text-small;
+        color: $light-grey-cl;
+      }
+    }
+  }
+  &__right {
+    flex: 1;
+    h4 {
+      font-weight: 600;
+    }
+    .des {
+      p {
+        font-size: $fs-text-small;
+        font-family: "pp", Arial, Helvetica, sans-serif;
+        @include overText(3);
+      }
+    }
+    .rate {
+      margin: 12px 0 16px;
+    }
+    .pcsGroup {
+      @include flexCustom(center, space-between);
+      &__left {
+        p:nth-child(1) {
+          font-size: 18px;
+          color: $main-green-cl;
+          font-weight: 600;
+        }
+        p:nth-child(2) {
+          font-size: $fs-text-small;
+          text-decoration: line-through;
+          font-weight: 600;
+          color: $light-grey-cl;
+        }
+      }
+      &__right {
+        @include flexCustom(center, space-between);
+        background-color: rgba($light-grey-cl, 0.3);
+        border: 1px solid $light-grey-cl;
+        border-radius: $border-radius-normal;
+        padding: 6.5px 6px;
+        width: 90px;
+        p:nth-child(1) {
+          font-size: $fs-text-medium;
+          color: $dark-grey-cl;
+        }
+        p {
+          cursor: pointer;
+        }
+        span {
+          color: $light-green-cl;
+        }
+      }
+    }
+  }
+}

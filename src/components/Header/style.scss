@@ -1,0 +1,10 @@
+@import "../../assets/styles/imports";
+.header {
+  @include flexCustom(center, space-between);
+  .right {
+    @include flexCustom;
+    .avatar {
+      margin-right: 20px;
+    }
+  }
+}

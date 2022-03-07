@@ -1,0 +1,54 @@
+@import "../../../../assets/styles/imports";
+.customersQuote {
+  --widthButton: 32px;
+  --heightButton: 48px;
+  margin-top: 142px;
+  position: relative;
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 42px;
+  }
+
+  &__wrapper {
+    position: relative;
+    .flickity-enabled:focus {
+      outline: none;
+    }
+    &--slider {
+      .flickity-button {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        z-index: 2 !important;
+        width: var(--widthButton);
+        height: var(--heightButton);
+        cursor: pointer;
+        opacity: 0;
+      }
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background: $black-cl;
+      color: $white-cl;
+      width: var(--widthButton);
+      height: var(--heightButton);
+      @include flexCustom(center, center);
+      z-index: 1;
+      cursor: pointer;
+      svg {
+        width: 15px;
+        height: 20px;
+      }
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+  }
+}

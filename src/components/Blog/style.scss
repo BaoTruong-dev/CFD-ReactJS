@@ -1,0 +1,100 @@
+@import "../../assets/styles/imports";
+.blog {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .img {
+    background: $grey-cl;
+  }
+  .tag {
+    font-weight: 700;
+    color: $main-green-cl;
+    font-size: $fs-text-small;
+    background-color: rgba($main-green-cl, 0.3);
+    border-radius: $border-radius-less;
+    padding: 0 5px;
+  }
+  .author {
+    display: flex;
+    p {
+      font-size: $fs-text-small;
+      margin-right: 16px;
+    }
+  }
+  &.large,
+  &.medium {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  &.large {
+    .img {
+      width: 100%;
+      border-top-left-radius: $border-radius-normal;
+      border-top-right-radius: $border-radius-normal;
+    }
+    .tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+    .info {
+      background-image: linear-gradient($grey-cl, $black-cl);
+      border-bottom-left-radius: $border-radius-normal;
+      border-bottom-right-radius: $border-radius-normal;
+      padding: 76px 65px 24px 24px;
+      .title {
+        color: $white-cl;
+        font-weight: 700;
+        font-size: 22px;
+      }
+      .author {
+        @include flexCustom(center, initial);
+        margin-top: 8px;
+        .avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: $grey-cl;
+        }
+        p {
+          color: $white-cl;
+        }
+        .name {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+  &.medium {
+    .img {
+      border-radius: $border-radius-normal;
+    }
+    .info {
+      margin-top: 24px;
+      .tag {
+        display: inline-block;
+      }
+      .title {
+        margin: 8px 0 16px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+  &.small {
+    @include flexCustom(center, space-between);
+    flex-direction: row-reverse;
+    .img {
+      width: 96px;
+      height: 96px;
+      background: $grey-cl;
+      border-radius: $border-radius-normal;
+    }
+    .info {
+      .title {
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "./variables";
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  // appearance: none;
+  // -moz-appearance: none;
+  // -webkit-appearance: none;
+}
+html,
+body {
+  width: 100%;
+  max-width: $max-width;
+  -webkit-font-smoothing: antialiased;
+  margin: auto;
+  @include text($fs-text, "pp", $lh-text, $text-cl, none);
+  background: $white-cl;
+  position: relative;
+  overflow-x: hidden;
+  // @include custom-scrollbar();
+  .mainwrapper {
+    width: 100%;
+    margin: auto;
+  }
+}

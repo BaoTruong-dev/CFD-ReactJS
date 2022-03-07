@@ -1,0 +1,8 @@
+@import "../../../../assets/styles/imports";
+.confirmation {
+  &__agree {
+    .agree:first-child + .error {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../assets/styles/imports";
+.orderSuccessfully {
+  background: linear-gradient(rgba($black-cl, 0.5), rgba($black-cl, 0.5)),
+    url("../../assets/imgs/login/bg.jpeg") center center;
+  width: 100vw;
+  height: 100vh;
+  @include flexCustom;
+  &__wrapper {
+    background-color: $white-cl;
+    width: 600px;
+    height: 300px;
+    padding-top: 40px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 3px 15px 0px #000000;
+    box-shadow: 1px 3px 15px 0px #000000;
+    .announce {
+      text-align: center;
+      color: $main-green-cl;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .img {
+      color: $light-green-cl;
+      text-align: center;
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .thanks {
+      text-align: center;
+      color: $dark-grey-cl;
+    }
+    .buttonGroup {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      .button:nth-child(1) {
+        background-color: red;
+      }
+      .button {
+        margin: 0 10px;
+        font-size: $fs-text-small;
+      }
+    }
+  }
+}

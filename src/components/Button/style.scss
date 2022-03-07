@@ -1,0 +1,85 @@
+@import "../../assets/styles/imports";
+.button {
+  --height: 36px;
+  --width: 76px;
+  // ----
+  background: $main-green-cl;
+  height: var(--height);
+  width: var(--width);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  @include flexCustom;
+  &.icon {
+    .button__wrapper {
+      @include flexCustom;
+      div {
+        margin-left: 12px;
+      }
+    }
+  }
+  &.color {
+    &-white {
+      .button__wrapper {
+        color: $white-cl;
+      }
+    }
+    &-black {
+      .button__wrapper {
+        color: $black-cl;
+      }
+    }
+    &-green {
+      .button__wrapper {
+        color: $main-green-cl;
+      }
+    }
+  }
+  &.size {
+    &-medium {
+      --height: 47px;
+      --width: 163px;
+      .button__wrapper {
+        div {
+          margin-left: 12px;
+        }
+      }
+    }
+    &-large {
+      --height: 48px;
+      --width: 179px;
+    }
+  }
+  &.border {
+    &-none {
+      border: none;
+    }
+    &-green {
+      border: 1px solid $main-green-cl;
+    }
+    &-lightGreen {
+      border: 1px solid $light-green-cl;
+    }
+    &-darkGreen {
+      border: 1px solid $dark-green-cl;
+    }
+    &-grey {
+      border: 1px solid $grey-cl;
+    }
+  }
+  &.round {
+    border-radius: 12px;
+  }
+  &.background {
+    &-white {
+      background: $white-cl;
+    }
+    &-grey {
+      background: $grey-cl;
+    }
+    &-transparent {
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../assets/styles/imports";
+.footer {
+  margin: 65px 0;
+  &__top {
+    @include flexCustom(stretch, space-between);
+  }
+}

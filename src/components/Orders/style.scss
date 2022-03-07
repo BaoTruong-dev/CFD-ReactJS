@@ -1,0 +1,80 @@
+@import "../../assets/styles/imports";
+.orders {
+  @include fullFixed;
+  @include flexCustom(unset, space-between);
+  background: $white-cl;
+  box-shadow: 1px 2px 16px 3px #000000;
+  right: 0;
+  flex-direction: column;
+  width: 400px;
+  z-index: 9;
+  @include transform(translateX(420px));
+  @include transition($t);
+  &.show {
+    @include transform(translateX(0));
+  }
+  &.--empty {
+    justify-content: unset;
+  }
+  &__empty {
+    width: 100%;
+    height: 100%;
+    @include flexCustom;
+  }
+  &__top {
+    padding: 24px 16px 0 16px;
+    &--title {
+      margin-bottom: 24px;
+      @include flexCustom(center, space-between);
+      h4 {
+        font-weight: 600;
+        font-size: 26px;
+      }
+      .close {
+        @include flexCustom(center, space-between);
+        cursor: pointer;
+        p {
+          margin-right: 10px;
+          font-size: $fs-text-small;
+          color: $light-grey-cl;
+        }
+      }
+    }
+  }
+  &__bottom {
+    &--total {
+      margin-bottom: 24px;
+      padding-left: 16px;
+      p {
+        font-weight: 600;
+      }
+      p:nth-child(1) {
+        font-size: $fs-text-small;
+      }
+      p:nth-child(2) {
+        font-size: 26px;
+        span {
+          display: inline-block;
+          margin-left: 8px;
+        }
+      }
+    }
+    &--direction {
+      @include flexCustom(center, space-between);
+      border-top: 1px solid $light-grey-cl;
+      padding: 28px 16px;
+      p {
+        font-weight: 600;
+      }
+      .button {
+        @include flexCustom;
+        width: 150px;
+        height: 48px;
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    margin: 16px 0 32px;
+  }
+}

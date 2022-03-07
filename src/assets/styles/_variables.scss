@@ -1,0 +1,46 @@
+/*primary colors*/
+$white-cl: #fff;
+$black-cl: #000;
+$dark-green-cl: #46760a;
+$main-green-cl: #6a983c;
+$light-green-cl: #92c064;
+$grey-cl: #f5f5f5;
+$light-grey-cl: #d1d1d1;
+$dark-grey-cl: #575757;
+$text-grey-cl: #a9a9a9;
+/*global text color*/
+$text-cl: #222;
+
+// time transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+$border-radius-less: 5px;
+$border-radius-normal: 12px;
+$border-radius-more: 18px;
+/*font families*/
+$font-stack: "pp", "Open Sans", sans-serif;
+
+/*headings typo*/
+$fs-text: 15px;
+$fs-text-medium: 14px;
+$fs-text-small: 12px;
+$lh-text: normal;
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 340px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1);
+$xs-max: ($xs-min - 1);
+$sm-max: ($sm-min - 1);
+$md-max: ($md-min - 1);
+$lg-max: ($lg-min - 1);
+
+/*BOXED LAYOUT*/
+$max-width: 1920px;
+$container-max-width: $max-width;
+$container-width: 1200px;

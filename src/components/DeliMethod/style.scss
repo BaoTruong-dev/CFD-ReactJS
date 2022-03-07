@@ -1,0 +1,37 @@
+@import "../../assets/styles/imports";
+.deliMethod {
+  &__container {
+    @include flexCustom(center, space-between);
+    background-color: rgba($grey-cl, 0.5);
+    border: 1px solid $light-grey-cl;
+    border-radius: $border-radius-normal;
+    padding: 0 18px;
+    font-size: $fs-text-small;
+    font-weight: 600;
+    height: 48px;
+    &--wrapper {
+      flex: 1;
+      @include flexCustom(center, space-between);
+      &--input {
+        @include flexCustom(center, center);
+        input {
+          height: 20px;
+          width: 20px;
+          margin-right: 18px;
+        }
+      }
+      &--price {
+        @include flexCustom(center, center);
+        p:nth-child(1) {
+          color: $main-green-cl;
+          margin-right: 12px;
+        }
+      }
+    }
+    &--brand {
+      @include flexCustom(center, space-between);
+      flex-direction: row-reverse;
+      flex: 1;
+    }
+  }
+}

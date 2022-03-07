@@ -1,0 +1,8 @@
+@import "../../../../assets/styles/imports";
+.homeCategory {
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 30px;
+  }
+}

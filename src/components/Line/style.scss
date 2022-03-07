@@ -1,0 +1,7 @@
+@import "../../assets/styles/imports";
+.line {
+  background-color: $light-grey-cl;
+  width: calc(100% - 90px);
+  margin: 0 auto;
+  height: 0.5px;
+}

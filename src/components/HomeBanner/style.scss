@@ -1,0 +1,17 @@
+@import "../../assets/styles/imports";
+.homeBanner {
+  background: url("../../assets/imgs/home/banner-categories.jpg") center center
+    no-repeat;
+  background-size: cover;
+  font-weight: 700;
+  padding: 42px 0 25px 32px;
+  border-radius: $border-radius-normal;
+  p {
+    color: $main-green-cl;
+    font-size: $fs-text-small;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 8px 0 95px;
+  }
+}

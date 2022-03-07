@@ -1,0 +1,17 @@
+@import "../../assets/styles/imports";
+.miniCart {
+  position: relative;
+  &__quantities {
+    @include flexCustom;
+    position: absolute;
+    background-color: $main-green-cl;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -6px;
+    p {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../assets/styles/imports";
+.inputField {
+  label {
+    display: block;
+    font-size: $fs-text-small;
+    font-weight: 700;
+  }
+  input {
+    width: 100%;
+    height: 42px;
+    outline: none;
+    border: 1px solid $light-grey-cl;
+    background-color: rgba($grey-cl, 0.5);
+    border-radius: $border-radius-normal;
+    padding-left: 20px;
+    // margin-bottom: 32px;
+    &::placeholder {
+      color: $light-grey-cl;
+    }
+  }
+  select {
+    width: 70%;
+    height: 42px;
+    border: 1px solid $light-grey-cl;
+    background-color: rgba($grey-cl, 0.5);
+    border-radius: $border-radius-normal;
+    padding: 0 20px;
+    padding-right: 50px;
+    cursor: pointer;
+  }
+}

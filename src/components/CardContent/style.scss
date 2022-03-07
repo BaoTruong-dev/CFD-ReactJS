@@ -1,0 +1,54 @@
+@import "../../assets/styles/imports";
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  padding: 16px;
+  border: 1px solid $light-grey-cl;
+  border-radius: 5px;
+  font-family: "pp", Arial, Helvetica, sans-serif;
+  .img {
+    width: 236px;
+    height: 180px;
+    background: $grey-cl;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 16px 0;
+    .title {
+      font-weight: 700;
+      font-size: $fs-text;
+    }
+    .content {
+      margin-top: auto;
+      color: $dark-grey-cl;
+      font-size: $fs-text-small;
+    }
+  }
+  .price {
+    @include flexCustom(center, space-between);
+    // margin-top: auto;
+    &__wrapper {
+      p:nth-child(1) {
+        font-weight: 700;
+      }
+      p:nth-child(2) {
+        color: #a9a9a9;
+        font-size: $fs-text-small;
+        text-decoration: line-through;
+      }
+    }
+    .button {
+      width: 90px;
+      height: 36px;
+    }
+  }
+}

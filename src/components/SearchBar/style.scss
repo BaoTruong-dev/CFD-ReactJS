@@ -1,0 +1,45 @@
+@import "../../assets/styles/imports";
+.searchBar {
+  @include flexCustom(center, space-between);
+  width: 500px;
+  padding: 0 16px;
+  height: 42px;
+  background-color: $grey-cl;
+  border-radius: 12px;
+  margin: 40px 0 50px;
+  .left,
+  .middle,
+  .right {
+    @include flexCustom;
+    cursor: pointer;
+  }
+  .left {
+    position: relative;
+    padding-right: 30px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: $light-grey-cl;
+      right: 0;
+      width: 20px;
+      height: 1px;
+      @include transform(rotate(90deg));
+    }
+    .filter {
+      margin: 12px;
+      p {
+        font-weight: 700;
+      }
+    }
+  }
+  .middle {
+    input {
+      border: none;
+      background-color: transparent;
+      font-size: $fs-text-medium;
+      outline: none;
+    }
+  }
+}

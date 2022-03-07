@@ -1,0 +1,50 @@
+@import "../../assets/styles/imports";
+.payment {
+  .direction {
+    font-size: $fs-text-small;
+    margin: 16px 0 32px;
+    &Home,
+    span {
+      color: $light-grey-cl;
+    }
+    span {
+      display: inline-block;
+      margin: 0 8px;
+    }
+  }
+  .error {
+    margin-bottom: 32px;
+  }
+  .titleGroup {
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .noteCurrentStep {
+      margin: 4px 0 32px;
+      @include flexCustom(center, space-between);
+      p {
+        font-size: $fs-text-small;
+        color: $light-grey-cl;
+      }
+    }
+  }
+  .distanceTop {
+    margin-top: 64px;
+  }
+  &Layout {
+    display: grid;
+    grid-template-columns: 1fr 540px;
+    &__left {
+      padding-right: 32px;
+      .button {
+        margin-top: 32px;
+      }
+    }
+    &__right {
+    }
+  }
+  &__copy {
+    margin-top: -30px;
+  }
+}

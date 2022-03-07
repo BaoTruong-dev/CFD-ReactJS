@@ -1,0 +1,22 @@
+@import "../../../../assets/styles/imports";
+.headline {
+  margin-top: 160px;
+  .top {
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 37px;
+    }
+    @include flexCustom(center, space-between);
+    .button {
+      a {
+        div {
+          color: $main-green-cl;
+        }
+      }
+    }
+  }
+  &__wrapper {
+    @include flexCustom(center, space-between);
+  }
+}

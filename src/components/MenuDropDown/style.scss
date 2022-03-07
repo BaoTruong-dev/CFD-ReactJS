@@ -1,0 +1,20 @@
+@import "../../assets/styles/imports";
+
+.menuDropDown {
+  background-color: $grey-cl;
+  ul {
+    @include flexCustom(center, none);
+    padding: 16px 0;
+    li {
+      cursor: pointer;
+      margin-right: 44px;
+      a {
+        font-weight: 600;
+        margin-right: 5px;
+        div {
+          color: $light-green-cl;
+        }
+      }
+    }
+  }
+}

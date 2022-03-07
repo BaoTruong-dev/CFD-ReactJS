@@ -1,0 +1,9 @@
+@import "../../assets/styles/imports";
+.itemList {
+  a {
+    @include flexCustom;
+    div {
+      margin-left: 6px;
+    }
+  }
+}

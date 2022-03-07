@@ -1,0 +1,19 @@
+@import "../../assets/styles/imports";
+.textarea {
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: $fs-text-small;
+  }
+  textarea {
+    font-family: pp;
+    width: 100%;
+    font-size: $fs-text-medium;
+    padding: 10px 0 0 20px;
+    height: 112px;
+    resize: none;
+    border-radius: $border-radius-normal;
+    border: 1px solid $light-grey-cl;
+    outline: none;
+  }
+}

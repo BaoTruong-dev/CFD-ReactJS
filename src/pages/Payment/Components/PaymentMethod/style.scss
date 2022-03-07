@@ -1,0 +1,8 @@
+@import "../../../../assets/styles/imports";
+.paymentMethod {
+  &__credit {
+    & > div:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

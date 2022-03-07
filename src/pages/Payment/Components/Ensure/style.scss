@@ -1,0 +1,14 @@
+@import "../../../../assets/styles/imports";
+.ensure {
+  margin: 34px 0 80px 0;
+  max-width: 214px;
+  p {
+    font-size: $fs-text-small;
+  }
+  &__affirmation {
+    font-weight: 600;
+  }
+  &__explain {
+    color: $light-grey-cl;
+  }
+}
