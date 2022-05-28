@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_react=self.webpackChunkmy_react||[]).push([[206],{9206:function(e,t,n){n.r(t),n.d(t,{default:function(){return u}});n(2791);var r=n(184);function u(){return(0,r.jsx)("div",{children:"FruitAVegetables"})}console.log("fruit and vegetable")}}]);
+//# sourceMappingURL=206.3e2458f0.chunk.js.map
