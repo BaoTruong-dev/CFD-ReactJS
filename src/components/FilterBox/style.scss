@@ -1,0 +1,23 @@
+@import "../../assets/styles/imports";
+.filterBox {
+  width: 100%;
+  height: 100%;
+  background: $grey-cl;
+  border-radius: 12px;
+  @include transition($t);
+  &__wrapper {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 16px 0;
+    & > div {
+      display: flex;
+      .icon {
+        color: $main-green-cl;
+        margin-right: 10px;
+      }
+    }
+  }
+  &:hover {
+    background-color: $light-grey-cl;
+  }
+}

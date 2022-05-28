@@ -4,7 +4,7 @@ import './style.scss';
 export default function Avatar({ name, avatar }) {
 
     return (
-        <Link to="/user/update" className='avatar'>
+        <Link to="/user/updateinformation" className='avatar'>
             <div className='avatar__img'>
                 <img src={avatar} />
             </div>

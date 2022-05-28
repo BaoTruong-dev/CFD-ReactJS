@@ -3,6 +3,7 @@ import React from 'react';
 import Button from '../Button';
 
 export default function HomeBanner({ src, note, title }) {
+
     return (
         <div className='homeBanner'>
             <p>{note}</p>

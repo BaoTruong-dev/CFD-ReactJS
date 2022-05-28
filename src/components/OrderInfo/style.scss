@@ -1,0 +1,59 @@
+@import "../../assets/styles/imports";
+.orderInfo {
+  &__wrapper {
+    background-color: $grey-cl;
+    padding: 20px;
+    &--details {
+      display: grid;
+      grid-template-columns: 80px 1fr 160px;
+      gap: 15px;
+      .img {
+        width: 100%;
+        height: 80px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .des {
+        p:nth-child(1) {
+          font-weight: 700;
+          font-size: 18px;
+        }
+        p:nth-child(2) {
+          max-width: 600px;
+          @include overText(3);
+        }
+        p:nth-child(3) {
+          color: $light-grey-cl;
+        }
+      }
+      .price {
+        @include flexCustom(unset, center);
+        flex-direction: column;
+
+        .unitPrice {
+          display: flex;
+          flex-direction: row-reverse;
+          color: $main-green-cl;
+        }
+        .tax {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    &--total {
+      .totalPrice {
+        color: $main-green-cl;
+        @include flexCustom(center, none);
+        flex-direction: row-reverse;
+      }
+    }
+    .totalButton {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}

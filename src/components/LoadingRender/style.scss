@@ -1,0 +1,43 @@
+@import "../../assets/styles/imports";
+.loadingRender {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white-cl;
+  opacity: 0.8;
+  z-index: 99;
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    @include flexCustom;
+    .circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: 0.6s ease-out bounce infinite alternate;
+      @include transform(translate3d(0, 0, 0) scale(0));
+      @include transform-origin(bottom center);
+    }
+    .circle:nth-child(1) {
+      background: $main-green-cl;
+    }
+    .circle:nth-child(2) {
+      background: red;
+      animation-delay: 0.2s;
+    }
+    .circle:nth-child(3) {
+      background: yellow;
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes bounce {
+  to {
+    // @include transform(scale(1));
+    @include transform(translate3d(0, -10px, 0) scale(1));
+  }
+}

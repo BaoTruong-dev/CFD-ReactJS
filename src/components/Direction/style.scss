@@ -1,0 +1,13 @@
+@import "../../assets/styles/imports";
+.direction {
+  font-size: $fs-text-small;
+  margin: 16px 0 32px;
+  &Home,
+  span {
+    color: $light-grey-cl;
+  }
+  span {
+    display: inline-block;
+    margin: 0 8px;
+  }
+}

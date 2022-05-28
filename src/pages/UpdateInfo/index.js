@@ -2,9 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
+import MenuDropDown from '../../components/MenuDropDown';
 import userService from '../../services/userService';
+import LoadingPage from '../LoadingPage';
 import './style.scss';
 export default function UpdateInfo() {
+    let infoNav = ['Home', 'All orders'];
+    let mainLink = 'user';
     let dispatch = useDispatch();
     let navigate = useNavigate();
     let nameInputRef = useRef();
@@ -70,8 +74,12 @@ export default function UpdateInfo() {
             type: 'LOGOUT'
         });
     };
+    if (Object.keys(updateInfo).length < 1) {
+        return <LoadingPage />;
+    }
     return (
         <>
+            <MenuDropDown nav={infoNav} mainLink={mainLink} />
             <div className='updateInfo'>
                 <h2>Update your information</h2>
                 <form className='updateInfo__wrapper'>

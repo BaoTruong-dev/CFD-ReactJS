@@ -1,0 +1,32 @@
+@import "../../assets/styles/imports";
+.orderDetail {
+  display: flex;
+  margin-top: 30px;
+  &__left {
+    margin-right: 50px;
+    background: $grey-cl;
+    padding: 20px;
+    h3 {
+      color: $main-green-cl;
+    }
+    .infoGroup {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      margin-top: 15px;
+      p:nth-child(1) {
+        color: $main-green-cl;
+      }
+    }
+  }
+  &__right {
+    .orderInfo {
+      flex: 1;
+      margin-top: 0;
+      .wrap {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

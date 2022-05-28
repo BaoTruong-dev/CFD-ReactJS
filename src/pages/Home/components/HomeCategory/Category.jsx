@@ -10,9 +10,9 @@ export default function HomeCategory() {
             <div className='left'>
                 <Catalogue title={dataTags.title.category} list={dataTags.listLink.category} point={'underLine'}
                 />
-                <Button positionIcon='right' size={'medium'} color={'black'} border={'grey'} background={'grey'}
+                <Button path="/allproducts" positionIcon='right' size={'medium'} color={'black'} border={'grey'} background={'grey'}
                     round={'round'}
-                >More categories</Button>
+                >More products</Button>
             </div>
             <div className='right'>
                 <HomeBanner note={'Banner subfocus'} title={'Space for heading'}></HomeBanner>

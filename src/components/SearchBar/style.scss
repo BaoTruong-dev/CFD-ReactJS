@@ -7,6 +7,7 @@
   background-color: $grey-cl;
   border-radius: 12px;
   margin: 40px 0 50px;
+  position: relative;
   .left,
   .middle,
   .right {
@@ -41,5 +42,10 @@
       font-size: $fs-text-medium;
       outline: none;
     }
+  }
+  .filterBox {
+    position: absolute;
+    top: 110%;
+    left: 0;
   }
 }

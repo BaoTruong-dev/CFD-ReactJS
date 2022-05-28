@@ -1,18 +1,59 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ArrowDown, CloseIcon, CompareIcon, HeartIcon, StarIcon } from '../../svgs';
 import Line from '../Line';
+import orderService from '../../services/orderService';
 import './style.scss';
-export default function ItemOrder({ src, title, des, price, discount, rate, qualities, id }) {
+import { Link } from 'react-router-dom';
+import LoadingRender from '../LoadingRender';
+export default function ItemOrder({ src, title, des, price, discount, rate, qualities, id, _id }) {
     let dispatch = useDispatch();
+    const handleRemove = (e) => {
+        e.preventDefault();
+        dispatch({
+            type: 'REMOVE',
+            payload: _id
+        });
+    };
+    const handleQuantities = (type) => {
+        dispatch({
+            type: 'LOADING_CHECKED',
+            payload: true
+        });
+        setTimeout(() => {
+            dispatch({
+                type: 'LOADING_CHECKED',
+                payload: false
+            });
+        }, 2000);
+        switch (type) {
+            case 'DECREASE':
+                return dispatch({
+                    type: 'DECREASE',
+                    payload: {
+                        quantity: qualities - 1,
+                        id: _id
+                    }
+                });
+            case 'INCREASE':
+                return dispatch({
+                    type: 'INCREASE',
+                    payload: {
+                        quantity: qualities + 1,
+                        id: _id
+                    }
+                });
+        }
+        return null;
+    };
     return (
         <>
-            <div className="itemOrder">
+            <Link className="itemOrder" to={`/productdetail?id=${id}`} >
                 <div className='itemOrder__left'>
                     <div className='itemOrder__left--img'>
                         <img src={src}></img>
                     </div>
-                    <div className='itemOrder__left--wishList'>
+                    {/* <div className='itemOrder__left--wishList'>
                         <div className='svg'>
                             <HeartIcon />
                         </div>
@@ -23,8 +64,8 @@ export default function ItemOrder({ src, title, des, price, discount, rate, qual
                             <CompareIcon />
                         </div>
                         <p>Compare</p>
-                    </div>
-                    <div className='itemOrder__left--remove'>
+                    </div> */}
+                    <div className='itemOrder__left--remove' onClick={handleRemove}>
                         <div className='svg'>
                             <CloseIcon />
                         </div>
@@ -47,32 +88,14 @@ export default function ItemOrder({ src, title, des, price, discount, rate, qual
                             <p>{price} VND</p>
                             <p>{discount} VND</p>
                         </div>
-                        <div className='pcsGroup__right'>
-                            <p onClick={() => {
-                                dispatch({
-                                    type: 'DECREASE',
-                                    payload: {
-                                        quantity: qualities - 1,
-                                        id: id
-                                    }
-                                });
-                            }}>-</p>
+                        <div className='pcsGroup__right' onClick={(e) => e.preventDefault()}>
+                            <p onClick={() => handleQuantities('DECREASE')}>-</p>
                             <span>{qualities}</span>
-                            <p
-                                onClick={() => {
-                                    dispatch({
-                                        type: 'INCREASE',
-                                        payload: {
-                                            quantity: qualities + 1,
-                                            id: id
-                                        }
-                                    });
-                                }}
-                            >+</p>
+                            <p onClick={() => handleQuantities('INCREASE')}>+</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <Line />
         </>
 

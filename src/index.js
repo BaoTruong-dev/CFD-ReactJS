@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import PopupOrdersProvider from './context/PopupOrders';
 import { ValidateProvider } from './context/Validate';
+import { Provider, useSelector } from 'react-redux';
+import store from './store';
+import ScrollToTop from './utilities/ScrollToTop';
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Router>
+      <ScrollToTop />
       <PopupOrdersProvider>
         <ValidateProvider>
-          <App />
+          <Provider store={store}>
+            <App />
+          </Provider>
         </ValidateProvider>
       </PopupOrdersProvider>
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

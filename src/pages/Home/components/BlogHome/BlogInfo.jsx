@@ -4,9 +4,16 @@ import Button from '../../../../components/Button';
 import { authorInfo } from '../../../../constant';
 import './style.scss';
 export default function BlogHome() {
+    const handle = () => {
+        console.log('click');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return (
         <div className='blogHome container-fluid'>
-            <div className='top'>
+            <div className='top' onClick={handle}>
                 <h3>Read our Blogs</h3>
                 <Button background={'transparent'} border={'none'} positionIcon={'right'}>Button</Button>
             </div>

@@ -12,7 +12,7 @@ export default function DeliMethod({ id, label, fee, brand, error, ...rest }) {
                     {fee &&
                         <div className='deliMethod__container--wrapper--price'>
                             <p>
-                                {fee}
+                                Free
                             </p>
                             <p>
                                 Additional price

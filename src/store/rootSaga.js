@@ -1,7 +1,8 @@
-import { takeEvery, call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import authService from '../services/authService';
 import cartService from '../services/cartService';
 import orderService from '../services/orderService';
+import productDetailsService from '../services/productDetailsService';
 import productsService from '../services/productsService';
 import userService from '../services/userService';
 function* fetchLogin(action) {
@@ -9,6 +10,7 @@ function* fetchLogin(action) {
         let result = yield call(authService.login, action.payload);
         localStorage.setItem('token', JSON.stringify(result.data));
         yield put({ type: 'GET_PROFILE' });
+        yield put({ type: 'GET_ALL_ORDER' });
     }
     catch (error) {
         // yield put({ type: 'FAILED_LOGIN', message: error.message });
@@ -66,14 +68,7 @@ function* fetchRegister(action) {
     }
 }
 
-function* fetchGetProducts() {
-    try {
-        let result = yield call(productsService.products);
-        yield put({ type: 'PRODUCTS', payload: result.data });
-    } catch (error) {
 
-    }
-}
 
 function* fetchGetCart() {
     try {
@@ -93,16 +88,71 @@ function* updateQuantity(action) {
     }
 }
 
+function* removeItem(action) {
+    try {
+        yield call(orderService.removeItem, action.payload);
+        let result = yield call(cartService.getCart);
+        yield put({ type: 'GET_CART', payload: result.data });
+    } catch (error) {
+
+    }
+}
+
 function* checkOutData(action) {
     try {
-        console.log('success');
-        let result = yield call(orderService.order, action.payload);
-        console.log('result', result);
+        yield call(orderService.order, action.payload);
+        let result = yield call(cartService.getCart);
+        yield put({ type: 'GET_CART', payload: result.data });
+        yield put({ type: 'GET_ALL_ORDER' });
     } catch (error) {
         console.log('Failed Checkout');
     }
 }
 
+function* getAllOrder() {
+    try {
+        let result = yield call(orderService.getAllOrder);
+        yield put({
+            type: 'GET_ORDER',
+            payload: result
+        });
+    } catch (error) {
+        // console.log('Error get all order!');
+    }
+}
+
+function* myOrderDetail(action) {
+    try {
+        let result = yield call(orderService.getOrderDetail, action.payload);
+        yield put({
+            type: 'GET_DETAIL',
+            payload: result.data
+        });
+    } catch (error) {
+        console.log('Error get all details!');
+    }
+}
+
+function* fetchGetProducts() {
+    try {
+        let result = yield call(productsService.products);
+        yield put({ type: 'PRODUCTS', payload: result.data });
+    } catch (error) {
+
+    }
+}
+
+function* getProductDetails(action) {
+    try {
+        let result = yield call(productDetailsService.productsDetail, action.payload);
+        yield put({
+            type: 'PRODUCT_DETAILS',
+            payload: result
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
 function* rootSaga() {
     yield takeEvery('LOGIN', fetchLogin);
     yield takeLatest('LOGOUT', clearCart);
@@ -112,7 +162,12 @@ function* rootSaga() {
     yield takeEvery('GET_PROFILE', fetchGetCart);
     yield takeLatest('GET_PRODUCTS', fetchGetProducts);
     yield takeEvery(['INCREASE', 'DECREASE'], updateQuantity);
+    yield takeEvery('REMOVE', removeItem);
     yield takeLatest('CHECK_OUT', checkOutData);
+    yield takeLatest('GET_ALL_ORDER', getAllOrder);
+    yield takeLatest('GET_ORDER_DETAIL', myOrderDetail);
+    yield takeLatest('GET_PRODUCT_DETAILS', getProductDetails);
+
 }
 
 export default rootSaga;

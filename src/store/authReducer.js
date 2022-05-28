@@ -1,5 +1,7 @@
+let token = JSON.parse(localStorage.getItem('token'));
+
 const initialState = {
-    login: false,
+    login: !!token,
     user: null,
     message: ''
 };
@@ -7,20 +9,24 @@ const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_PROFILE':
             return {
+                ...state,
                 login: true,
                 user: action.payload
             };
         case 'FAILED_REGISTER':
             return {
-                ...initialState,
+                ...state,
                 message: action.error
             };
         case 'LOGOUT':
             return {
-                ...initialState
+                ...state,
+                login: false,
+                user: null
             };
+        default:
+            return state;
     }
-    return state;
 };
 
 export default authReducer;

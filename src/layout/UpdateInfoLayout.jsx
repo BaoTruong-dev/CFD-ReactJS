@@ -9,7 +9,6 @@ export default function UpdateInfoLayout() {
         <>
             <InfoBar />
             <Header />
-            <MenuDropDown />
             <Outlet />
             <Footer />
         </>

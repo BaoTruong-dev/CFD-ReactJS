@@ -1,0 +1,16 @@
+@import "../../assets/styles/imports";
+.emptyOrders {
+  margin-top: 30px;
+  &__img {
+    @include flexCustom;
+  }
+  &__content {
+    margin: 20px;
+    color: $dark-green-cl;
+    text-align: center;
+    font-weight: 700;
+  }
+  &__button {
+    @include flexCustom;
+  }
+}

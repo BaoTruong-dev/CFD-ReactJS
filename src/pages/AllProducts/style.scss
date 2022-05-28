@@ -1,0 +1,133 @@
+@import "../../assets/styles/imports";
+.allProducts {
+  &__head {
+    @include flexCustom(center, space-between);
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    &--display {
+      display: flex;
+      .displayGroup {
+        @include flexCustom;
+        margin-right: 25px;
+        color: $light-grey-cl;
+        cursor: pointer;
+        p {
+          margin-left: 12px;
+        }
+        &.active {
+          color: $black-cl;
+        }
+      }
+    }
+  }
+  &__collections {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    margin-top: 30px;
+    .left {
+      .filter__group {
+        margin-top: 50px;
+        h4 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 18px;
+        }
+        label {
+          @include flexCustom(center, unset);
+          margin-bottom: 18px;
+          input {
+            margin-right: 10px;
+          }
+          .label {
+            @include flexCustom(center, unset);
+            color: $main-green-cl;
+          }
+        }
+        &.--rate {
+          label {
+            .label {
+              div {
+                color: $main-green-cl;
+              }
+            }
+          }
+          label:nth-child(3) {
+            .label {
+              div:last-child {
+                color: $light-grey-cl;
+              }
+            }
+          }
+          label:nth-child(4) {
+            .label {
+              div:last-child,
+              div:nth-child(4) {
+                color: $light-grey-cl;
+              }
+            }
+          }
+          label:nth-child(5) {
+            .label {
+              div:last-child,
+              div:nth-child(3),
+              div:nth-child(4) {
+                color: $light-grey-cl;
+              }
+            }
+          }
+          label:nth-child(6) {
+            .label {
+              div:last-child,
+              div:nth-child(2),
+              div:nth-child(3),
+              div:nth-child(4) {
+                color: $light-grey-cl;
+              }
+            }
+          }
+          label:last-child {
+            div {
+              color: $light-grey-cl;
+            }
+          }
+        }
+        &--price {
+          display: flex;
+          justify-content: space-between;
+          label {
+            display: flex;
+            flex-direction: column;
+            align-items: unset;
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input {
+              max-width: 100px;
+              height: 42px;
+              border-radius: $border-radius-less;
+              outline: none;
+              border: 1px solid $light-grey-cl;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      margin-left: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .cardContent {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__paginate {
+    .paginate {
+      margin: 0 auto;
+    }
+  }
+}

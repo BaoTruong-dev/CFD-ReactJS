@@ -13,7 +13,7 @@ export default function OrderSuccessfully() {
                 <p className='thanks'>Thank you so much for your order!</p>
                 <div className='buttonGroup'>
                     <Button color="white" border='green' background='green' size='medium' round="round" path="/">Go back to home</Button>
-                    <Button color="white" border='green' background='green' size='medium' round="round" path="/order/allorders">Check your all orders</Button>
+                    <Button color="white" border='green' background='green' size='medium' round="round" path="/user/allorders">Check your all orders</Button>
                 </div>
             </div>
         </div>

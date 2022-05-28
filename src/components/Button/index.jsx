@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowRight } from '../../svgs';
 import './style.scss';
 
 
-export default function Button({ children, color, size, background, border, round, positionIcon, onClick, path, ...rest }) {
+export default function Button({ children, color, size, background, border, round, positionIcon, onClick, path = '', id, ...rest }) {
     return (
-        <Link to={path ? `${path}` : ''} className={`button ${positionIcon ? 'icon' : ''} color-${color} size-${size} border-${border} background-${background} ${round}`} onClick={onClick} {...rest}>
+        <Link to={id ? `${path}?id=${id}` : `${path}`} className={`button ${positionIcon ? 'icon' : ''} color-${color} size-${size} border-${border} background-${background} ${round}`} onClick={onClick} {...rest}>
             <div className='button__wrapper'>
                 {positionIcon === 'left' && <div><ArrowLeft /></div>}
                 <span>{children}</span>

@@ -33,6 +33,9 @@
       font-size: $fs-text-small;
     }
   }
+  .rate {
+    color: $main-green-cl;
+  }
   .price {
     @include flexCustom(center, space-between);
     // margin-top: auto;
