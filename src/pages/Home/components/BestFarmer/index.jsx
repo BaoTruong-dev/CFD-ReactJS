@@ -11,8 +11,8 @@ export default function BestFarmer(props) {
     let productsArray = props.products;
     const { cart } = useSelector(store => store.cart);
     const { login } = useSelector(store => store.auth);
-    const [isDirect, setIsDirect] = useState(false);
     const [isReDirectLogin, setIsReDirectLogin] = useState(false);
+    const [isDirect, setIsDirect] = useState(false);
     const dispatch = useDispatch();
     const handleOrder = (id) => {
         if (login) {
@@ -52,7 +52,7 @@ export default function BestFarmer(props) {
             <div className='bestFarmer homePage__content container-fluid'>
                 <div className='left'>
                     <Catalogue title={dataTags.title.bestFarmers} list={dataTags.listLink.bestFarmers} point={'underLine'}></Catalogue>
-                    <Button path="/allproducts" positionIcon='right' size={'medium'} color={'black'} border={'grey'} background={'grey'}
+                    <Button path="/CFD-ReactJs/allproducts" positionIcon='right' size={'medium'} color={'black'} border={'grey'} background={'grey'}
                         round={'round'}
                     >More products</Button>
                 </div>

@@ -24,22 +24,22 @@ const OrderDetail = React.lazy(() => import('../pages/OrderDetail'));
 const routers = [
     {
         path: '*',
-        element: MainLayout
+        element: PageNotFound
     },
-    {
-        path: '/',
-        element: MainLayout,
-        routes: [
-            {
-                index: true,
-                element: Home,
-            },
-            {
-                path: "/allproducts",
-                element: AllProducts
-            }
-        ]
-    },
+    // {
+    //     path: '/',
+    //     element: MainLayout,
+    //     routes: [
+    //         {
+    //             index: true,
+    //             element: Home,
+    //         },
+    //         {
+    //             path: "/allproducts",
+    //             element: AllProducts
+    //         }
+    //     ]
+    // },
     {
         path: '/CFD-ReactJs',
         element: MainLayout,
@@ -49,7 +49,7 @@ const routers = [
                 element: Home,
             },
             {
-                path: "/allproducts",
+                path: "/CFD-ReactJs/allproducts",
                 element: AllProducts
             }
         ]
