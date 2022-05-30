@@ -24,7 +24,7 @@ const OrderDetail = React.lazy(() => import('../pages/OrderDetail'));
 const routers = [
     {
         path: '*',
-        element: PageNotFound
+        element: MainLayout
     },
     {
         path: '/',
