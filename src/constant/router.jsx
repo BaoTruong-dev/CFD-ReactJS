@@ -41,6 +41,20 @@ const routers = [
         ]
     },
     {
+        path: '/CFD-ReactJs',
+        element: MainLayout,
+        routes: [
+            {
+                index: true,
+                element: Home,
+            },
+            {
+                path: "/allproducts",
+                element: AllProducts
+            }
+        ]
+    },
+    {
         path: '/loadingpage',
         element: LoadingPage,
     },
