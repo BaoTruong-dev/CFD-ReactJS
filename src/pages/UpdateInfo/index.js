@@ -134,7 +134,7 @@ export default function UpdateInfo() {
                             {updateInfo.avatar && <img src={updateInfo.avatar} />}
                             <input type="file" onChange={onChangeImg} />
                         </div>
-                        <Button color='white' round='round' size='medium' onClick={logoutHandle} path='/'>Log out</Button>
+                        <Button color='white' round='round' size='medium' onClick={logoutHandle} path='/CFD-ReactJs'>Log out</Button>
                     </div>
                 </form>
             </div>
