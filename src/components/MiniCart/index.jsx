@@ -12,7 +12,6 @@ export default function MiniCart() {
     const handlePopup = (e) => {
         e.stopPropagation();
         if (store.auth.login) {
-            console.log('click');
             showPopupHandle();
         } else {
             navigate('/authen/login');

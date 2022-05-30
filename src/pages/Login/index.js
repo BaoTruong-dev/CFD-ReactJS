@@ -29,12 +29,12 @@ export default function Login() {
             type: 'LOGIN',
             payload: account
         });
-        navigateHome('/');
+        navigateHome('/CFD-ReactJs');
 
     };
     return (
         <>
-            <AuthPage title={'LOGIN'} path="/" handle={handleAccount} backPath='/' buttonName="Login">
+            <AuthPage title={'LOGIN'} path="/" handle={handleAccount} backPath='/CFD-ReactJs' buttonName="Login">
                 <InputField id="account" placeHolder='Your account' onChange={onChangeData('username')} />
                 <InputField type='password' id="password" placeHolder='Your password' onChange={onChangeData('password')} />
                 <p className='error'>{errorMessage}</p>

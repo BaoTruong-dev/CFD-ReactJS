@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <div className="header container-fluid">
             <div className="left">
-                <Link to="/"><MainLogo /></Link>
+                <Link to="/CFD-ReactJs"><MainLogo /></Link>
             </div>
             <SearchBar />
             <div className='right'>

@@ -70,7 +70,7 @@ export default function Orders() {
                             round='round'
                             border='darkGreen'
                             color='white'
-                            path='payment'
+                            path='/payment'
                         >
                             Go to Checkout
                         </Button>
