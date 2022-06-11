@@ -25,7 +25,7 @@ export default function SearchBar() {
             type: 'FILTER_PRODUCTS',
             payload: filterProducts
         });
-        navigate('/allproducts');
+        navigate('/CFD-ReactJs/allproducts');
     };
     const handleFilter = (e) => {
         let value = e.target.value;

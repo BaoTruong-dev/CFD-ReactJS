@@ -15,7 +15,6 @@ import CardContent from '../../components/CardContent';
 import LoadingPage from '../LoadingPage';
 import LoadingRender from '../../components/LoadingRender';
 export default function ProductDetail() {
-    window.scrollTo(100, 200);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { cart } = useSelector(store => store.cart);
@@ -51,38 +50,43 @@ export default function ProductDetail() {
         navigate(-1);
     };
     const handleAddToCart = () => {
-        if (data) {
-            dispatch({
-                type: 'LOADING_CHECKED',
-                payload: true
-            });
-            setTimeout(() => {
+        if (login) {
+            if (data) {
                 dispatch({
                     type: 'LOADING_CHECKED',
-                    payload: false
+                    payload: true
                 });
-            }, 2000);
-            let index = cart.listItems.findIndex(e => {
-                return e.product._id == data._id;
-            });
-            if (index >= 0) {
-                let quantity = cart.listItems[index].quantity;
-                dispatch({
-                    type: 'INCREASE',
-                    payload: {
-                        quantity: quantity += num,
-                        id: data._id
-                    }
+                setTimeout(() => {
+                    dispatch({
+                        type: 'LOADING_CHECKED',
+                        payload: false
+                    });
+                }, 2000);
+                let index = cart.listItems.findIndex(e => {
+                    return e.product._id == data._id;
                 });
-            } else {
-                dispatch({
-                    type: 'INCREASE',
-                    payload: {
-                        quantity: num,
-                        id: data._id
-                    }
-                });
+                if (index >= 0) {
+                    let quantity = cart.listItems[index].quantity;
+                    dispatch({
+                        type: 'INCREASE',
+                        payload: {
+                            quantity: quantity += num,
+                            id: data._id
+                        }
+                    });
+                } else {
+                    dispatch({
+                        type: 'INCREASE',
+                        payload: {
+                            quantity: num,
+                            id: data._id
+                        }
+                    });
+                }
             }
+        }
+        else {
+            setIsReDirectLogin(true);
         }
     };
     const handleBuyNow = () => {

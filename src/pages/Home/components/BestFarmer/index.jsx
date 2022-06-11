@@ -67,7 +67,7 @@ export default function BestFarmer(props) {
         <div className='bestFarmer homePage__content container-fluid'>
             <div className='left'>
                 <Catalogue title={dataTags.title.bestFarmers} list={dataTags.listLink.bestFarmers} point={'underLine'}></Catalogue>
-                <Button path="/allproducts" positionIcon='right' size={'medium'} color={'black'} border={'grey'} background={'grey'}
+                <Button path="/CFD-ReactJs/allproducts" positionIcon='right' size={'medium'} color={'black'} border={'grey'} background={'grey'}
                     round={'round'}
                 >More products</Button>
             </div>

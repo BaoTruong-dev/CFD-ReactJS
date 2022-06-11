@@ -12,7 +12,7 @@ export default function MainLayout() {
         <div onClick={hidePopupHandle}>
             <InfoBar />
             <Header />
-            <MenuDropDown />
+            <MenuDropDown mainLink='/CFD-ReactJs' />
             <Outlet></Outlet>
             <Footer />
             <Orders />

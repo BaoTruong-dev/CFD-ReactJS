@@ -68,7 +68,7 @@ export default function Payment() {
                 <span>/</span>
                 <Link to="/payment" className='directionCurrentPage'>Checkout Page</Link>
             </div> */}
-                <Direction backContent='Home Page' currentLink='/payment' currentContent='Payment' />
+                <Direction backContent='Home Page' currentLink='/payment' currentContent='Payment' backLink='/CFD-ReactJs' />
                 <div className='paymentLayout'>
                     <div className='paymentLayout__left'>
                         <BillingInfo />

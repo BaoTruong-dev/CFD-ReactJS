@@ -21,7 +21,7 @@ export default function FilterBox({ filter }) {
             type: 'FILTER_PRODUCTS',
             payload: filterProducts
         });
-        navigate('/allproducts');
+        navigate('/CFD-ReactJs/allproducts');
     };
     return (
         <>

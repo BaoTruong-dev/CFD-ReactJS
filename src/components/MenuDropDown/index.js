@@ -3,7 +3,7 @@ import ItemList from '../ItemList';
 import './style.scss';
 
 export default function MenuDropDown({ nav, mainLink }) {
-    let menuList = ['All Products', 'Fruit and vegetables', 'Meat and fish', 'Drinks', 'Kitchen', 'Special nutrition', 'Baby', 'Pharmacy'];
+    let menuList = ['All Products'];
     return (
         <div className='menuDropDown container-fluid'>
             <ul>
