@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/CFD-ReactJs/static/css/main.9aec92c6.css",
-    "main.js": "/CFD-ReactJs/static/js/main.e1c60652.js",
-    "static/css/988.3a5355a6.chunk.css": "/CFD-ReactJs/static/css/988.3a5355a6.chunk.css",
-    "static/js/988.662896b5.chunk.js": "/CFD-ReactJs/static/js/988.662896b5.chunk.js",
+    "main.js": "/CFD-ReactJs/static/js/main.f7ad75e4.js",
+    "static/css/988.ca6b757f.chunk.css": "/CFD-ReactJs/static/css/988.ca6b757f.chunk.css",
+    "static/js/988.84156969.chunk.js": "/CFD-ReactJs/static/js/988.84156969.chunk.js",
     "static/css/206.31d6cfe0.chunk.css": "/CFD-ReactJs/static/css/206.31d6cfe0.chunk.css",
     "static/js/206.3e2458f0.chunk.js": "/CFD-ReactJs/static/js/206.3e2458f0.chunk.js",
     "static/css/702.d6c519ae.chunk.css": "/CFD-ReactJs/static/css/702.d6c519ae.chunk.css",
@@ -17,9 +17,9 @@
     "static/media/empty_cart.png": "/CFD-ReactJs/static/media/empty_cart.b50a22cf272497885fd4.png",
     "index.html": "/CFD-ReactJs/index.html",
     "main.9aec92c6.css.map": "/CFD-ReactJs/static/css/main.9aec92c6.css.map",
-    "main.e1c60652.js.map": "/CFD-ReactJs/static/js/main.e1c60652.js.map",
-    "988.3a5355a6.chunk.css.map": "/CFD-ReactJs/static/css/988.3a5355a6.chunk.css.map",
-    "988.662896b5.chunk.js.map": "/CFD-ReactJs/static/js/988.662896b5.chunk.js.map",
+    "main.f7ad75e4.js.map": "/CFD-ReactJs/static/js/main.f7ad75e4.js.map",
+    "988.ca6b757f.chunk.css.map": "/CFD-ReactJs/static/css/988.ca6b757f.chunk.css.map",
+    "988.84156969.chunk.js.map": "/CFD-ReactJs/static/js/988.84156969.chunk.js.map",
     "206.3e2458f0.chunk.js.map": "/CFD-ReactJs/static/js/206.3e2458f0.chunk.js.map",
     "702.d6c519ae.chunk.css.map": "/CFD-ReactJs/static/css/702.d6c519ae.chunk.css.map",
     "702.48bb43ae.chunk.js.map": "/CFD-ReactJs/static/js/702.48bb43ae.chunk.js.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.9aec92c6.css",
-    "static/js/main.e1c60652.js"
+    "static/js/main.f7ad75e4.js"
   ]
 }
