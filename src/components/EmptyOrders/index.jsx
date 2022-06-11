@@ -10,7 +10,7 @@ export default function EmptyOrders() {
       </div>
       <p className='emptyOrders__content'>Your cart is empty...</p>
       <div className="emptyOrders__button">
-        <Button color='white' size='medium' round='round' path='/allproducts'>BUY NOW</Button>
+        <Button color='white' size='medium' round='round' path='/CFD-ReactJs/allproducts'>BUY NOW</Button>
       </div>
     </div>
   );
