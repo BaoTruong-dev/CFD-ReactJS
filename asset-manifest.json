@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CFD-ReactJs/static/css/main.9aec92c6.css",
-    "main.js": "/CFD-ReactJs/static/js/main.f7ad75e4.js",
+    "main.js": "/CFD-ReactJs/static/js/main.0d1b69ac.js",
     "static/css/988.ca6b757f.chunk.css": "/CFD-ReactJs/static/css/988.ca6b757f.chunk.css",
     "static/js/988.84156969.chunk.js": "/CFD-ReactJs/static/js/988.84156969.chunk.js",
     "static/css/206.31d6cfe0.chunk.css": "/CFD-ReactJs/static/css/206.31d6cfe0.chunk.css",
@@ -17,7 +17,7 @@
     "static/media/empty_cart.png": "/CFD-ReactJs/static/media/empty_cart.b50a22cf272497885fd4.png",
     "index.html": "/CFD-ReactJs/index.html",
     "main.9aec92c6.css.map": "/CFD-ReactJs/static/css/main.9aec92c6.css.map",
-    "main.f7ad75e4.js.map": "/CFD-ReactJs/static/js/main.f7ad75e4.js.map",
+    "main.0d1b69ac.js.map": "/CFD-ReactJs/static/js/main.0d1b69ac.js.map",
     "988.ca6b757f.chunk.css.map": "/CFD-ReactJs/static/css/988.ca6b757f.chunk.css.map",
     "988.84156969.chunk.js.map": "/CFD-ReactJs/static/js/988.84156969.chunk.js.map",
     "206.3e2458f0.chunk.js.map": "/CFD-ReactJs/static/js/206.3e2458f0.chunk.js.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.9aec92c6.css",
-    "static/js/main.f7ad75e4.js"
+    "static/js/main.0d1b69ac.js"
   ]
 }
