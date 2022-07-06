@@ -65,7 +65,7 @@ export default function UpdateInfo() {
                 type: 'UPDATE_INFO',
                 payload: updateInfo
             });
-            navigate('/');
+            navigate('/CFD-ReactJs');
         }
     };
     const logoutHandle = () => {
