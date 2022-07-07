@@ -1,6 +1,6 @@
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
@@ -16,6 +16,9 @@ export default function AllProducts() {
     let navigate = useNavigate();
     const { search } = useLocation();
     const { cart } = useSelector(store => store.cart);
+    const { login } = useSelector(store => store.auth);
+    const [navigatePayment, setNavigatePayment] = useState(false);
+    const [navigateLogin, setNavigateLogin] = useState(false);
     const [filter, setFilter] = useState({
         brands: [],
         rate: [],
@@ -23,7 +26,12 @@ export default function AllProducts() {
         max: ''
     });
     let dispatch = useDispatch();
+    if (navigateLogin) return <Navigate to="/authen/login" />;
+    if (navigatePayment) return <Navigate to="/payment" />;
     const handleOrder = (id) => {
+        if (!login) {
+            return setNavigateLogin(true);
+        }
         if (cart) {
             let findIndex = cart.listItems.findIndex(data => {
                 return data.product._id == id;
@@ -47,6 +55,7 @@ export default function AllProducts() {
                 });
             }
         }
+        setNavigatePayment(true);
     };
     const handleFilterCheck = (name) => (e) => {
         let checked = e.target.checked;
